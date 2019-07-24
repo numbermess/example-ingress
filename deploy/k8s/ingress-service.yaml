@@ -9,6 +9,10 @@ spec:
   rules:
     - http:
         paths:
+          - path: /frontend/?(.*)
+            backend:
+              - serviceName: example-client-cluster-ip
+                servicePort: 80
           - path: /human/?(.*)
             backend:
               serviceName: humans-cluster-ip
