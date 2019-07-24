@@ -44,7 +44,7 @@ deploy:
   # `Script` means we are on our own
   provider: script
 
-  script: bash ./deploy.sh
+  script: bash ./deploy/k8s/deploy.sh
 
   on:
     branch: master
