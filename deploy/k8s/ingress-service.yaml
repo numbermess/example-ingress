@@ -17,6 +17,7 @@ spec:
           - backend:
               serviceName: example-client-cluster-ip
               servicePort: 80
+            path: /frontend(/|$)(.*)
     - http:
         paths:
           - path: /human/?(.*)
