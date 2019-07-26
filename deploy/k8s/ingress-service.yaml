@@ -14,10 +14,11 @@ spec:
     - host: odadn.me
       http:
         paths:
-          - backend:
+          - path: /?(.*)
+            backend:
               serviceName: example-client-cluster-ip
               servicePort: 80
-            path: /frontend(/|$)(.*)
+
     - http:
         paths:
           - path: /human/?(.*)
