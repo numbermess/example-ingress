@@ -11,14 +11,6 @@ metadata:
     nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
 spec:
   rules:
-    - host: odadn.me
-      http:
-        paths:
-          - path: /?(.*)
-            backend:
-              serviceName: example-client-cluster-ip
-              servicePort: 80
-
     - http:
         paths:
           - path: /human/?(.*)
@@ -29,3 +21,7 @@ spec:
             backend:
               serviceName: families-cluster-ip
               servicePort: 8080
+          - path: /?(.*)
+            backend:
+              serviceName: example-client-cluster-ip
+              servicePort: 80
