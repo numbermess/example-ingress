@@ -26,3 +26,7 @@ spec:
             backend:
               serviceName: example-client-cluster-ip
               servicePort: 80
+          - path: /chore/?(.*)
+            backend:
+              serviceName: chores-cluster-ip
+              servicePort: 8080
