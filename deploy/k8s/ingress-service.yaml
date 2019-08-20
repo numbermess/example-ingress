@@ -21,7 +21,7 @@ spec:
             backend:
               serviceName: oauth-cluster-ip
               servicePort: 8080
-          - path: /identities/?(.*)
+          - path: /identity/?(.*)
             backend:
               serviceName: identities-cluster-ip
               servicePort: 8080
