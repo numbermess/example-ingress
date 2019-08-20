@@ -25,6 +25,26 @@ spec:
             backend:
               serviceName: identities-cluster-ip
               servicePort: 8080
+          - path: /product/?(.*)
+            backend:
+              serviceName: products-cluster-ip
+              servicePort: 8080
+#          - path: /human/?(.*)
+#            backend:
+#              serviceName: humans-cluster-ip
+#              servicePort: 8080
+#          - path: /family/?(.*)
+#            backend:
+#              serviceName: families-cluster-ip
+#              servicePort: 8080
+#          - path: /?(.*)
+#            backend:
+#              serviceName: example-client-cluster-ip
+#              servicePort: 80
+#          - path: /chore/?(.*)
+#            backend:
+#              serviceName: chores-cluster-ip
+#              servicePort: 8080
 #          - path: /human
 #            backend:
 #              serviceName: humans-cluster-ip
